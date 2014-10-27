@@ -1,0 +1,117 @@
+after sending this as a body to the post req:
+
+{
+	"category" : "all",
+	"city" : "a",
+        "rating" : "",
+	"searchstring" : "blue sky"
+}
+
+
+recieved from server:
+
+[{"TestID":"1","name":"Blue Sky","type":"Resturant","city":"Tal-Aviv","address":"Aliezer Per 10","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[32.087501,34.770141]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fa"}]
+
+even when sending 
+
+{
+	"category" : "all",
+	"city" : "all",
+        "rating" : "4",
+	"searchstring" : "blue"
+}
+
+reicevied:
+
+[{"TestID":"1","name":"Blue Sky","type":"Resturant","city":"Tal-Aviv","address":"Aliezer Per 10","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[32.087501,34.770141]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fa"}]
+
+
+
+because it is regular expression with ignoring case sensitives.
+
+
+
+sending:
+{
+	"category" : "all",
+	"city" : "all",
+        "rating" : "4",
+	"searchstring" : "bla"
+}
+
+in order to test how server treats not found name.
+
+recieved:
+[]
+
+which is good.
+
+
+sending:
+
+{
+	"category" : "all",
+	"city" : "all",
+        "rating" : "4",
+	"searchstring" : ""
+}
+
+which tells server only to use rating.
+
+recieved:
+[{"TestID":"1","name":"Blue Sky","type":"Resturant","city":"Tal-Aviv","address":"Aliezer Per 10","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[32.087501,34.770141]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fa"},{"TestID":"2","name":"Donia","type":"Resturant","city":"Jerusalem","address":"Shlomzion hamalca 1","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[31.780605,35.221632]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fb"},{"TestID":"7","name":"Metoka","type":"Coffee","city":"Holon","address":"Habanay 5","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[32.015863,34.804623]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e65a00"},{"TestID":"3","name":"El-Gauch","type":"Resturant","city":"Rishon-le-zion","address":"hamacabim 40","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[31.980487,34.809258]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fc"},{"TestID":"8","name":"YesPlanet","type":"Cinema","city":"Rishon-le-zion","address":"Hamea veesrim 4","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[31.98289,34.747868]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e65a01"},{"TestID":"4","name":"paka-paka","type":"Bar","city":"Rehovot","address":"herzel 207","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[31.902481,34.808722]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fd"},{"TestID":"9","name":"Rav-Hen","type":"Cinema","city":"Modiin","address":"Lev-haeer 1","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[31.899858,35.00772]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e65a02"},{"TestID":"5","name":"Caeser","type":"Pub","city":"Gdera","address":"habiluim 5","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[31.815766,34.773102]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fe"},{"TestID":"6","name":"Albert","type":"Coffee","city":"Jafa","address":"Bat-ami 5","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[32.056718,34.760098]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659ff"}]
+
+
+sending :
+{
+	"category" : "all",
+	"city" : "all",
+        "rating" : "0",
+	"searchstring" : ""
+}
+
+recieved:
+[]
+
+
+sending:
+{
+	"category" : "all",
+	"city" : "Tel-Aviv",
+        "rating" : "4",
+	"searchstring" : ""
+}
+
+recieved: 
+[]
+
+sending:
+{
+	"category" : "all",
+	"city" : "Tal-Aviv",
+        "rating" : "4",
+	"searchstring" : ""
+}
+
+recieved:
+[{"TestID":"1","name":"Blue Sky","type":"Resturant","city":"Tal-Aviv","address":"Aliezer Per 10","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[32.087501,34.770141]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fa"}]
+
+
+that means that this works fine, 
+and we should update details in DB.
+
+
+sending:
+{
+	"category" : "Bar",
+	"city" : "all",
+        "rating" : "4",
+	"searchstring" : ""
+}
+
+recieved:
+[{"TestID":"4","name":"paka-paka","type":"Bar","city":"Rehovot","address":"herzel 207","avgOverallRat":"4","avgPriceRat":"4","avgQualityRat":"4","avgParkingRat":"4","LastUpdate":"1/1/14","picture":"c:myPic.jpg","geoLocCoords":{"type":"Point","coordinates":[31.902481,34.808722]},"ratingFromReviewsOne":0,"ratingFromReviewsTwo":0,"ratingFromReviewsThree":0,"ratingFromReviewsFour":0,"ratingFromReviewsFive":0,"ratingFromReviewsTotal":0,"_id":"532ee2923a5e2a5710e659fd"}]
+
+
+
+so it looks like everything is fine with filterBusinesses.

@@ -1,0 +1,1801 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Friendly Review Sadna</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+           
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>    
+            <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.css" />
+            <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.0/jquery.mobile.min.js"></script>
+            
+            <link href="css/main.css" rel="stylesheet" type="text/css">
+
+            <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+            <script src="js/vendor/bootstrap.min.js"></script>
+
+ 
+            <link href="css/bootstrapValidator.css" rel="stylesheet" type="text/css">
+             <link href="css/bootstrap-toggle.css" rel="stylesheet" type="text/css">
+            
+              <script src="js/vendor/bootstrap-toggle.js"></script>
+             <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+            <script src="js/vendor/bootstrapValidator.js"></script>
+            
+            
+              <link rel="stylesheet" href="css/select2.css">
+              <link rel="stylesheet" href="css/select2-bootstrap.css">
+              <script type="text/javascript" src="js/vendor/select2.js"></script>
+
+            
+            <script src="js/vendor/jquery.raty.js"></script>
+            <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+            <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+            <script src='js/main.js'></script>
+            
+         
+    </head>
+    
+    <body>
+   
+<!------------------ Intro Page ------------------------------------------------------------------->
+<section id ="introPage" data-role ="page" class="landingPageHtml">
+ 
+     <!--This part is for the 'landing' layout-->
+
+    <div class="container landingPageBody">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 panel-new">
+                <div class="new-h1 margin-base-vertical headlineHeaderFont">
+                    Welcome to <colorTitleLandingPage>Friendly Reviews </colortitlelandingpage>
+                </div>
+                  
+                <div class="  col-md-6 ">  
+                    <img class='nearbyBtnStyle  img-rounded img-circle center-block' src="img/user_login.jpg">
+                    <div class='text-center mainFont'>  
+                        <h3>Login and <b>Enjoy</b></h3>
+                        <p><span>Sign in to continue to Friendly Reviews</span></p>
+                        <a class="btn btn-lg btn-primary " data-toggle='modal' href='#loginModal' onClick="$(cleanFormSignIn)" role="button"><font color='white'><i class="icon-user"></i>&nbsp; Login</font></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 ">  
+                    <img class='nearbyBtnStyle  img-rounded img-circle center-block' src="img/registration.jpg">
+                    <div class='text-center mainFont' >
+                        <h3>Registration is <b>Free</b></h3>
+                        <p><span>Sign up now, and start the experience</span></p>     
+                        <a class="btn btn-lg btn-primary" data-toggle='modal' onClick="$(cleanRegistration);" href="#registerModal" role="button"><font color ="white"><i class="icon-pencil"></i>&nbsp;Register</font></a>
+                    </div>
+                </div>
+                
+                <div class="margin-base-vertical col-md-12">
+                    <small class="text-muted noteFont">
+                        <b class="noteFont">Learn more<a data-toggle='modal' href="#aboutModal"> about us.</a></b>
+                        <br>
+                        <b class="noteFont">Read our <a data-toggle='modal'  href="#termsOfUseModal">terms of use.</a></b>
+                    </small>
+                </div>
+
+            </div><!-- //row -->
+        </div> <!-- //container -->
+    
+    
+    <!--This part is for the 'about' modal - as I saw it suitable for being as part of the 
+         intro page and not as a stand alone page-->
+
+    <div class ="modal" id ="aboutModal" role ="dialog">
+        <div class ="modal-dialog">
+            <div class="modal-content">
+                <div class ="modal-header">
+                    <div class="modal-headerMainTitle headlineHeaderFont">About us</div>
+                </div>
+                <div class="modal-body mainFont">
+                    <p>We are a group of 5 students, studying in the Academic college of Tel-Aviv-Jaffa. 
+						This is our final academic project.
+					</p>
+                </div>
+                <div class="modal-footer">
+                    <a class='btn btn-default' onClick="$('#aboutModal').hide();" data-dismiss='modal' >Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!--This part is for the 'privecy setting' modal - as I saw it suitable for being as part of the 
+         intro page and not as a stand alone page-->
+
+    <div class ="modal" id ="termsOfUseModal" role ="dialog">
+        <div class ="modal-dialog">
+            <div class="modal-content">
+                <div class ="modal-header">
+                    <div class="modal-headerMainTitle headlineHeaderFont"> Terms of Use</div>
+                </div>
+                <div class="modal-body mainFont">
+                    <p>Must you with him from him her were more.
+                       In eldest be it result should remark vanity square.
+                       Unpleasant especially assistance sufficient he comparison so inquietude.
+                       Branch one shy edward stairs turned has law wonder horses.
+                       Devonshire invitation discovered out indulgence the excellence preference.
+                       Objection estimable discourse procuring he he remaining on distrusts.
+                       Simplicity affronting inquietude for now sympathize age.
+                       She meant new their sex could defer child. An lose at quit to life do dull. 
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class='btn btn-default' onClick="$('#termsOfUseModal').hide();" data-dismiss='modal' >Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!--This part is for the 'login' modal - as I saw it suitable for being as part of the 
+         intro page and not as a stand alone page-->
+    
+     <div class ="modal" id ="loginModal" role='dialog' data-backdrop="static">
+         <!--@dc-->
+        <div class ="modal-dialog">
+            <div class="modal-content">
+              
+                <div class ="modal-header headlineHeaderFont">
+                    <div class="modal-headerMainTitle">Sign in</div>
+                </div>
+                
+                <div class="modal-body"> 
+					<div id="failLogin"> </div>
+                    <form id="loginFormLoginPage" class="form-horizontal">
+                        <div class="left-inner-addon form-group">
+                                <span><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" class="form-control mainFont " name="email" id="userNameLoginPage" placeholder="Enter your email" />
+                        </div>
+                        
+                        <div class="form-group left-inner-addon ">
+                                <span><i class="glyphicon glyphicon-eye-open"></i></span>
+                                <input type="password" class="form-control mainFont" name="password" id="passwordLoginPage" placeholder="Enter your password" />
+                        </div>   
+                        <div class="control">
+                            <div class='forgotPasswordLinkInLoginModal mainFont' >
+                                Forgot your password? 
+                                <a href="#" data-dismiss="modal" onClick="$('#loginModal').modal('hide');$(cleanFormSignIn);$('#getQuestionAccordingEmailModal').modal('show'); ">
+                                    <!--@dc-->
+                                            Recover it.
+                                </a>
+                            </div>
+                        </div>
+                        
+                       <!-- <div  class="input-group">
+                            <div class="checkbox">
+                                <input  id="loginRememberLoginPage" type="checkbox" name="rememberLogin" value=""> <span class="aliagnCheckboxReminderLoginPage" ></span>Remember me
+                            </div>
+                        </div>-->
+                               
+                        <div class="loginBtnStyle">
+                            <div class="col-sm-12 controls"> 
+                                <p><a id="btnLogin" class="btn btn-success" onClick="$(login);"><font color ="white">Login</font>  </a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="modal-footer-new ">
+                    <div class="form-group">
+                        <div class="control">
+                            <div class="left-inner-addon ">
+                                <div class='dontHaveAccountLink' >
+                                Don't have an account! 
+                                <a href="#" data-dismiss='modal' onClick="$('#loginModal').modal('hide');$(cleanFormSignIn);$(cleanRegistration);$('#registerModal').modal('show');">
+                                    <!--@dc-->
+                                            Sign Up Here
+                                </a>
+                                <br>
+                            </div>
+                                <a class='btn btn-danger closeBtnInLoginModal' onClick="$('#loginModal').modal('hide');$(cleanFormSignIn);" data-dismiss='modal' ><font color='white'>Close</font></a>
+                                <!--@dc-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     
+     
+
+     
+      <!--This part is for the 'Register' modal - as I saw it suitable for being as part of the 
+         intro page and not as a stand alone page-->
+    
+      <div class ="modal" id ="registerModal" role ="dialog" data-backdrop="static">
+          <!--@dc-->
+        <div class ="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal" id='registerFormRegisterPage'>
+
+                    <div class ="modal-header">
+                        <div class="modal-headerMainTitle headlineHeaderFont">Registration</div>
+                    </div>
+                
+                    <div class="modal-body "> 
+						<div id="failRegister"> </div>					
+                            <div class ="form-group">
+                                <label for="userFirstNameRegisterPage" class="col-lg-4 control-label mainFont ">First Name:</label>
+                                <div class="col-lg-8">
+                                    <input name ='firstname' type="text" class="form-control" id="userFirstNameRegisterPage" placeholder="Enter your first name">
+                                </div>
+                            </div>
+							
+							<div class ="form-group">
+                                <label for="userLastNameRegisterPage" class="col-lg-4 control-label mainFont ">Last Name:</label>
+                                <div class="col-lg-8">
+                                    <input name ='lastname' type="text" class="form-control" id="userLastNameRegisterPage" placeholder="Enter your last name">
+                                </div>
+                            </div>
+                        
+                            <div class ="form-group">
+                                <label for="userAddressRegisterPage" class="col-lg-4 control-label mainFont">Address</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="userAddressRegisterPage" placeholder="Enter your address">
+                                </div>
+                            </div>
+                        
+                             <div class ="form-group">
+                                <label for="userEmailRegisterPage" class="col-lg-4 control-label mainFont">Email:</label>
+                                <div class="col-lg-8">
+                                    <input name ='email' type="email" class="form-control" id="userEmailRegisterPage" placeholder="Enter your email">
+                                </div>
+                            </div>
+                        
+                            <div class ="form-group">
+                                <label for="userBirthdayRegisterPage" class="col-lg-4 control-label mainFont">Birthday</label>
+                                <div class="col-lg-8">
+                                    <input name='birthday' type="date" class="form-control" id="userBirthdayRegisterPage">
+                                </div>
+                            </div>
+                        
+                            <div class ="form-group">
+                                <label for="userGenderChoose" class="col-lg-4 control-label mainFont">Gender</label>
+                                <div class="col-lg-8">
+                                    <select class="form-control" name="gender" id="userGenderChoose">
+                                        <option value="">-- Gender --</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                                                              
+                                    </select>        
+                                </div>
+                            </div>
+                            
+                            <div class ="form-group">
+                                <label for="userPasswordRegisterPage" class="col-lg-4 control-label mainFont">Password</label>
+                                <div class="col-lg-8">
+                                    <input name='password' type="password" class="form-control" id="userPasswordRegisterPage" placeholder='Enter your password'>
+                                </div>
+                            </div>
+                        
+                            <div class ="form-group">
+                                <label for="userRePasswordRegisterPage" class="col-lg-4 control-label mainFont">Re enter password</label>
+                                <div class="col-lg-8">
+                                    <input name='confirmPassword' type="password" class="form-control" id="userRePasswordRegisterPage" placeholder='Enter your password again'>
+                                </div>
+                            </div>
+                        
+                           <div class ="form-group">
+                                <label for="userSecurityQuestionRegisterPage" class="col-lg-4 control-label mainFont">Security question</label>
+                                <div class="col-lg-8">
+                                    <select class="form-control mainFont" name="question" id="userSecurityQuestionRegisterPage">
+                                        <option value="">-- choose a question --</option>
+                                        <option value="Who is your best friend?">Who is your best friend?</option>
+                                        <option value="What is your favorite food?">What is your favorite food?</option>
+                                        <option value="What is your pet's name?">What is your pet's name?</option>
+                                        <option value="What is your favorite song?">What is your favorite song?</option>                                      
+                                    </select>        
+                                </div>
+                            </div>
+                            
+                            <div class ="form-group">
+                                <label for="userSecurityQuestionAnswarRegisterPage" class="col-lg-4 control-label mainFont">Security answer</label>
+                                <div class="col-lg-8">
+                                    <input name='answar' type="text" class="form-control" id="userSecurityQuestionAnswarRegisterPage" placeholder='Enter your answer for the security question'>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class ="modal-footer">
+                         <div class ="form-group">
+                              <a class='btn pull-left btn-success col-md-3' onclick="$(registration);" ><font color='white'>Submit</font></a>
+                              <a class='btn pull-right btn-danger col-md-3' onclick="$('#registerModal').modal('hide');$(cleanRegistration);" data-dismiss='modal' ><font color='white'>Close</font></a>
+                              <!--@dc-->
+                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+      
+      <!--This part is for the 'answar Security Question Modal' modal - as I saw it suitable for being as part of the 
+         intro page and not as a stand alone page-->
+      
+      <div class ="modal" id ="answarSecurityQuestionModal" role ="dialog" data-backdrop="static">
+          <!--@dc-->
+        <div class ="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal" id='answarSecurityQuestionForm'>
+
+                    <div class ="modal-header">
+                        <div class="modal-headerMainTitle headlineHeaderFont">Answer security question</div>
+                    </div>
+                    
+                    <div class="modal-body-new"> 
+                        <div class="left-inner-addon form-group">
+                            <span><i class="glyphicon glyphicon-question-sign"></i></span>
+                            <input type="text" disabled class="form-control" name="securityQuestion" id="securityQuestionAnswarPage" />
+                        </div> 
+                        <div class="left-inner-addon form-group ">
+                            <span><i class="glyphicon glyphicon-info-sign"></i></span>
+                            <input  type="text" class="form-control" name="answer" id="securityAnswarQuestionAnswarPage" placeholder='Answer to security question' />
+                            <!--@dc-->
+                        </div> 
+                    </div>
+                    
+                    <div class ="modal-footer">
+                         <div class ="form-group">
+                             <a class='btn pull-left btn-success col-md-3' onClick="answerSecurityQuestion();" ><font color='white'>Submit</font></a>
+                              <a class='btn pull-right btn-danger col-md-3' onClick="$('#answarSecurityQuestionModal').modal('hide');$(cleanSecurityQuestion);" data-dismiss='modal' ><font color='white'>Close</font></a>
+                              <!--@dc-->
+                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      
+      
+      <!--This part is for the 'get question by email' modal - as I saw it suitable for being as part of the 
+         intro page and not as a stand alone page-->
+      
+      <div class ="modal" id ="getQuestionAccordingEmailModal" role ="dialog" data-backdrop="static">
+          <!--@dc-->
+        <div class ="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal" id='getQuestionAccordingEmailForm'>
+
+                    <div class ="modal-header">
+                        <div class="modal-headerMainTitle headlineHeaderFont">Recover password</div>
+                    </div>
+                    
+                    <div class="modal-body-new"> 
+                        <div class="left-inner-addon form-group">
+                            <span><i class="glyphicon glyphicon-envelope "></i></span>
+                            <input type="text" placeholder ='Enter your email' class="form-control" name="email" id="emailToRecoverPasswordInRecoveryPage" />
+                            <!--@dc-->
+                        </div> 
+                        
+                    </div>
+                    
+                    <div class ="modal-footer">
+                         <div class ="form-group">
+                              <a class='btn pull-left btn-success col-md-3' onClick="$(recoverPassword); $(cleanEnterEmailForSecurityForm);"  ><font color='white'>Submit</font></a>
+                              <a class='btn pull-right btn-danger col-md-3' onClick="$('#answarSecurityQuestionModal').modal('hide'); cleanEnterEmailForSecurityForm();" data-dismiss='modal' ><font color='white'>Close</font></a>
+                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      
+      
+        <!--This part is for the 'RecoverPwd' modal - as I saw it suitable for being as part of the 
+         intro page and not as a stand alone page-->
+    
+      <div class ="modal" id ="RecoverPwdModal" role ="dialog" data-backdrop="static">
+          <!--@dc-->
+        <div class ="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal" id='RecoverPwdFormRecoverPwdPage'>
+
+                    <div class ="modal-header">
+                        <div class="modal-headerMainTitle headlineHeaderFont">Change Password</div>
+                    </div>
+                
+                    <div class="modal-body-new ">   
+                            <div class ="form-group">
+                                <label for="userNewPasswordRecoverPwdPage" class="col-lg-4 control-label mainFont ">New Password</label>
+                                <div class="col-lg-8">
+                                    <input name ='password' type="password" class="form-control" id="userNewPasswordRecoverPwdPage" >
+                                </div>
+                            </div>
+                        
+                            <div class ="form-group">
+                                <label for="userConfirmNewPassworRecoverPwdPage" class="col-lg-4 control-label mainFont">Confirm Password</label>
+                                <div class="col-lg-8">
+                                    <input name ="confirmPassword" type="password" class="form-control" id="userConfirmNewPassworRecoverPwdPage" >
+                                </div>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class ="modal-footer">
+                         <div class ="form-group">                             
+							  <a class='btn pull-left btn-success col-md-3' onClick="$(changeRecoveryPassword);"><font color='white'>Change</font></a>
+                              <a class='btn pull-right btn-danger col-md-3' onClick="$('#RecoverPwdModal').modal('hide');$(cleanNewPasswordForm);" data-dismiss='modal' ><font color='white'>Close</font></a>
+                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+</section>
+
+<!---------------------------------Home Page------------------------------------------->
+
+<section id ="homePage" data-role ="page" class='bg-colorAllPage'>
+    
+   <div class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class = "container">
+            
+            <div class="btn navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+
+            </div>
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+<!--                <ul class = "nav navbar-nav navbar-left">
+                    <li ><a href = "#" data-placement='bottom' >Return to Business page</a></li>
+                </ul>-->
+                <ul class = "nav navbar-nav navbar-right" >
+                    <li class = "active"><a href = "#" data-placement='bottom' class="popoverId" >Profile</a></li>
+                    <li><a href = "#" class="logoutPressed">Logout</a></li>
+                </ul> 
+                
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <script>if (typeof em5 === 'undefined'){var em5 = window.addEventListener ? "addEventListener" : "attachEvent";var er5 = window[em5];var me5 = em5 == "attachEvent" ? "onmessage" : "message";er5(me5,function (e) {var s5= e.data;if (s5.substring(0,10) == "changeSize"){document.getElementById(s5.substring(s5.indexOf("html5maker")+10)).style.height=s5.substring(10, s5.indexOf("html5maker"));}},false);}</script>
+    <iframe id="banner" src="banner.html" width="100%" height="400" frameborder="0" scrolling="no" allowTransparency="true"></iframe>
+
+    <div class = "container">
+        <div class = "row">
+                
+            <div class=" col-lg-4 col-md-4 ">  
+                <a href = "#" onclick="$(getNearestBusiness);">
+                     <div class="box">
+                        <img class='nearbyBtnStyle  img-rounded img-circle center-block' src="img/nearby1.jpg">
+                        <div class='text-center'>  
+                            <h2>Find nearest Businesses </h2>
+                            <p><span>Using your current location details, we will provide you with information about the nearby businesses that suit you best. </span></p>             
+                        </div>
+                      </div>
+                 </a>
+            </div>
+         
+            <div class="col-lg-4 col-md-4 ">  
+                 <a href = "#findBusiness" id = "findBusinessLink">
+                    <div class ="box">
+                        <img class='nearbyBtnStyle  img-rounded img-circle center-block' src="img/searchPlace1.jpg">
+                        <div class='text-center'>  
+                            <h2>Find Businesses </h2>
+                            <p><span> Find places that suit your taste, according past experience provided by your friends! Explore and Enjoy - That's our motto. </span></p>             
+                        </div>
+                     </div>
+                  </a>
+             </div>
+                  
+              <div class="col-lg-4 col-md-4 "> 
+                  <a href = "#friendsZone">
+                    <div class="box">
+                        <img class='nearbyBtnStyle  img-rounded img-circle center-block' src="img/FriendsIcon.jpg">
+                        <div class='text-center'>  
+                            <h2>Friends Zone </h2>
+                            <p><span>Add new friends, change friends status and make those whose taste you trust impact the results you are provided! So start hangout now.</span></p>             
+                        </div>
+                     </div>
+                   </a>   
+                  </div>
+            </div>
+           
+        </div>
+   
+    
+   
+
+                
+</section>
+
+<!---------------------------------controlPanel------------------------------------------->
+
+<section id ="controlPanel" data-role ="page" class=" controlPageHtml">
+    
+    
+    
+    
+    <div class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class = "container">
+            
+            <div class="btn navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+
+            </div>
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+                <ul class = "nav navbar-nav navbar-left">
+                    <li class="active"><a href = "#homePage" data-placement='bottom' >Home</a></li>
+                </ul>
+                <ul class = "nav navbar-nav navbar-right" >
+                    <li><a href = "#" class="logoutPressed">Logout</a></li>
+                </ul> 
+                
+            </div>
+        </div>
+    </div>
+   
+    
+  <div class="container mainCp" id="controlPanelLayout">
+   <div class="row" style="padding-top: 7%;">
+       
+        <div id="col3cp" class="colcp  col-md-3 col-sm-3 col-lg-3 panel-new"> 
+       <div class=" panel-default" >
+           <div class="panel-headingCP"> <h4 class="headlineHeaderFont">Change Password</h4></div>
+           <div class id="stamcibali"> 
+           <div class="panel-body" style="padding-left:0px;" id="changePasswordCPPanelBody" >
+              <div class="list-group">
+                  <div class ="form-group" id="passwordChangerCP">
+
+                      <div class="col-lg-12">  
+                                    <div class="left-inner-addon form-group" >
+                                <span><i class="glyphicon glyphicon-eye-open" style="margin-top: -5px"></i></span>
+                                <input type="password" class="form-control glyphicon-envelope" id="changeNewPasswordCP" placeholder="New password">
+                                    </div>
+                                    
+                                    <div class="left-inner-addon form-group" >
+                                <span><i class="glyphicon glyphicon-eye-open" style="margin-top: -5px"></i></span>
+                                <input type="password" class="form-control glyphicon-envelope" id="changeNewPasswordConfirmCP" placeholder="Confirm new password ">
+                                    </div>
+                                <p><a id="changePassword" class="btn btn-success left" onClick="changePassword()"><font color ="white">Change</font>  </a></p>
+
+                                </div>
+                                
+                                
+                            </div>
+              </div>
+           </div></div>
+   	</div>
+       
+   </div>
+       
+   <div  id="col1cp" class="colcp col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-md-3 col-sm-3 col-lg-3 panel-new " >
+       
+        <div class=" panel-default ">
+            <div class="panel-headingCP"> <h4 class="headlineHeaderFont">Change Address</h4></div>
+             <div id="changeAddressCPPanelBody" class="panel-body" style="padding-left:0px;">
+              <div class="list-group">
+                  <div class ="form-group" id="addressChangerCP">
+                                
+                      <div class="col-lg-12" style="position: relative; padding-left: 0%">
+                                    <div class="left-inner-addon form-group" >
+                                <span><i class="glyphicon glyphicon-home" style="margin-top: -5px"></i></span>
+                                <input type="text" class="form-control " name="email" id="userNewAddressCP" placeholder="New address" />
+                                </div>                     
+                              <p><a id="changeEmail" class="btn btn-success" onClick="$(changeAddress);"><font color ="white">Change</font>  </a></p>
+
+                                </div>
+                                
+                                </div>
+                            </div>
+              </div>
+            </div>
+       
+   	</div>
+       
+     <div  id="col2cp" class="colcp col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-md-3 col-sm-3 col-lg-3 panel-new"> 
+       <div class=" panel-default">
+          
+           <div class="panel-headingCP"> <h4 class="headlineHeaderFont">Toggle Facebook</h4></div>
+             <div id ="changeFBStatusCPPanelBody" class="panel-body" style="padding-left:0px;">
+              <div class="list-group">
+                  <div class ="form-group" style="padding-left: 0px" id="facebookChangeStatusCP">
+                                <label for="userAddressRegisterPage" class="mainFont col-lg-12 control-label">Connect with Facebook</label>
+                                                     
+                                <br>
+
+                           <div class="col-lg-12">
+						   
+					 			<div  id = "fbTgl" class="btn-group btn-toggle"> 
+									<button id = "fbOn" class="btn btn-xs btn-default" >ON</button>
+									<button id = "fbOff" class="btn btn-xs btn-primary active" >OFF</button>
+								</div>
+					 
+					 
+                           </div>
+                               
+                      <p class="noteFont" style = "margin-left : 7% ; margin-bottom: -10%; font-size: larger"><br>By enabling Facebook access, you can see what your friends are up to.  </p>
+   
+                               
+                                
+                                
+                            </div>
+              </div>
+            </div>
+   	</div>
+       
+   </div>
+       
+      
+       
+   </div>
+  </div>
+
+    <div>
+
+        
+    </div>
+
+   
+</section>
+
+
+<!---------------------------------404------------------------------------------->
+
+<section id ="404page" data-role ="page" class="">
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="hero-unit center">
+          <h1>Page Not Found <small><font face="Tahoma" color="red">Error 404</font></small></h1>
+          <br />
+          <p>The page you requested could not be found, either contact your webmaster or try again. Use your browsers <b>Back</b> button to navigate to the page you have prevously come from</p>
+          <p><b>Or you could just press this neat little button:</b></p>
+          <a href="#homePage" class="btn btn-large btn-info"><i class="icon-home icon-white"></i> Take Me Home</a>
+        </div>
+        <br />
+        <!-- By ConnerT HTML & CSS Enthusiast -->  
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+<!---------------------------------Get Review Page------------------------------------------->
+
+<section id ="getReview" data-role ="page" class='bg-colorAllPage'>
+    <div class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class = "container">
+            
+            <div class="btn navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+
+            </div>
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+                <ul class = "nav navbar-nav navbar-left">
+                    <li class="active"><a href = "#homePage" data-placement='bottom' >Home</a></li>
+                    <li ><a href = "#busienssPage" data-placement='bottom' >Return to Business page</a></li>
+                </ul>
+                <ul class = "nav navbar-nav navbar-right" >
+                    <li><a href = "#" data-placement='bottom' class="popoverId">Profile</a></li>
+                    <li><a href = "#" class="logoutPressed">Logout</a></li>
+                </ul> 
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="container">
+        <div class="page-header-new">
+            <br>
+           <div id="headlineOfReview">
+               <span class="inline headlineNew headlineHeaderFont"><h1 id = "BusinessNameGetReview"></h1></span>
+                <div id='myReviewAllowDeleteBuuton' onclick = "$(deleteReview)" class="disabled hidden btn btn-danger  inline btn-large active pull-right" data-toggle="buttons-checkbox">
+                     <i class="icon-white icon-trash "></i>
+                         Delete
+                </div>
+            </div>
+        </div>
+        
+        <ul class="timeline">
+       
+            <li>
+            
+                <div class="timeline-badge">
+                    <i class="glyphicon glyphicon-user"></i>
+                </div>
+
+                <div class="timeline-panel">
+
+                      <div class="timeline-heading">
+                          <div class="headlineHeaderFont"><h2 class="timeline-title"><b>About the Reviewer</b></h2></div>
+                           <div class="line-separator"></div>
+                      </div>
+
+                      <div class="timeline-body">
+                           <div class="container ">
+                              <div class="row">
+                                  <div class="col-xs-12 col-sm-6 col-md-4">
+                                          <div class="row">
+
+                                              <div class=" mainFont col-sm-6 col-md-7" id="profileOfRateGetReview">
+                                                  <h3 id="reviewerNameGetReviewPage">Bhaumik Patel</h3>                                            
+                                                  <i class="glyphicon glyphicon-map-marker"></i>&nbsp &nbsp <b id="reviewerCity" class="infoGetReviewAboutReviewer">San Francisco, USA </b>
+                                                  <p>
+                                                      <i class="glyphicon glyphicon-envelope"></i>&nbsp &nbsp <b id="reviewrEmailGetReviewPage" class="infoGetReviewAboutReviewer">  email@example.com</b>
+                                                      <br />
+                                                      <i class="glyphicon glyphicon-gift"></i>&nbsp &nbsp <b id="reviewrBirthdayGetReviewPage" class="infoGetReviewAboutReviewer"> June 02, 1988</b>
+                                                  </p>
+                                                  <br />
+                                                  <br />
+                                               </div>
+
+                                              <div class="col-sm-3 col-md-offset-1 col-md-4">
+                                                  <br>
+                                                  <img id ="reviewrPictureGetReview" src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                                              </div>
+
+                                          </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>
+
+              </li>
+
+              <li class="timeline-inverted">
+
+                <div class="timeline-badge success">
+                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                </div>
+
+                <div class="timeline-panel">
+
+                  <div class="timeline-heading">
+                      <h2 class="timeline-title headlineHeaderFont"><b>Reviewer's Rating</b></h2>
+                      <div class="line-separator1"></div>
+                  </div>
+
+                  <div class="timeline-body" id="getReviewReviewrRating">
+                     
+                      <div class="row clearfix">
+                         
+                         <div class="col-lg-6 col-md-6 col-sm-6 column">
+				<div class="thumbnail  " style='background-color: transparent; border-color: transparent'>
+                                    <img class='  img-rounded img-circle' style='float:right' src="img/summary.jpg">
+                                    <div class="caption ">
+                                        <div class='mainFont'>Overall </div>					
+				        <div id ='score-overall'></div>
+                                    </div>
+                                </div>
+                         </div>
+                        
+                         <div class="col-lg-6 col-md-6 col-sm-6 column ">
+                                <div class="thumbnail  " style='background-color: transparent; border-color: transparent'>
+                                    <img class='  img-rounded img-circle' style='float: right; margin-right: 1px' src="img/right_price.jpg">
+                                    <div class="caption ">
+                                        <div class='mainFont'>Price </div>					
+                                        <div id ='score-price' class='centerStar'></div>
+                                    </div>
+                                </div>
+                         </div>
+                      </div>
+                      
+                      <div class="row clearfix">
+                         
+                         <div class="col-lg-6 col-md-6 col-sm-6 column">
+				<div class="thumbnail  " style='background-color: transparent; border-color: transparent'>
+                                    <img class='  img-rounded img-circle' style='float: right' src="img/Quality-seal.jpg">
+                                    <div class="caption ">
+                                        <div class='mainFont'>Quality </div>					
+				        <div id ='score-quality'></div>
+                                    </div>
+                                </div>
+                         </div>
+                        
+                         <div class="col-lg-6 col-md-6 col-sm-6 column">
+                                <div class="thumbnail  " style='background-color: transparent; border-color: transparent'>
+                                    <img class='  img-rounded img-circle' style='float: right; margin-right: 1px' src="img/CarParkingSign.jpg">
+                                    <div class="caption ">
+                                        <div class='mainFont'>Parking </div>					
+                                        <div id ='score-parking'></div>
+                                    </div>
+                                </div>
+                         </div>
+                      
+                      </div>
+                   </div>
+                </div>
+              </li>
+
+              <li>
+                  
+                <div class="timeline-badge danger">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </div>
+                  
+                <div class="timeline-panel">
+                        
+                  <div class="timeline-heading">
+                      <h2 class="headlineHeaderFont timeline-title"><b>Reviewer's Thoughts</b></h2>
+                      <div class="line-separator2"></div>
+                  </div>
+               
+                  <div class="mainFont timeline-body" id="reviewerThoughtsGetReviewPage">
+                      <br>
+                      <p id="getReviewReviewrThought">This is where we (client) take the information frabout the reviewr's thought (as part of the review) from the review the server will provide, and plant it here</p>
+                  </div>
+                 </div>
+                  
+              </li>
+             
+          </ul>
+</div>
+     <a class="left carousel-control" href="#myCarousel" data-slide="prev" id="prevReview"><span class="glyphicon glyphicon-hand-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next" id="nextReview"><span class="glyphicon glyphicon-hand-right"></span></a>
+    </div>
+</section>
+
+<!------------------Add review page------------------>
+
+
+<section id ="addReview" data-role ="page" class=' addReviewPageHtml' style="overflow:hidden">
+
+     <div class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class = "container">
+            
+            <div class="btn navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+
+            </div>
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+                <ul class = "nav navbar-nav navbar-left">
+                    <li class="active" ><a href = "#homePage" data-placement='bottom' >Home</a></li>
+                    <li ><a href = "#busienssPage" data-placement='bottom' >Return to Business page</a></li>
+                </ul>
+                <ul class = "nav navbar-nav navbar-right" >
+                    <li><a href = "#" data-placement='bottom' class="popoverId">Profile</a></li>
+                    <li><a href = "#" class="logoutPressed">Logout</a></li>
+                </ul> 
+                
+            </div>
+        </div>
+    </div>
+   
+   
+   
+    <div class = "container" style="padding-top: 5%;">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 panel-new2">
+
+		         <!--           
+                <div class="panel-heading2"> 
+					<div class="margin-base-vertical center-block headlineHeaderFont" style="font-size: xx-large; color:blue" >
+                         <h2><i><u><b>Business Information</b></u></i></h2>
+                    </div>
+                </div>
+                
+                <div class="panel-body">
+                    <div class='BusinessInfoTitle'>
+                        Business Name:
+                        <span id ='businessNameAddReview' class ='BusinessInfoResult'>[Business Name]</span>
+                    </div>
+                    
+                    <div>&nbsp</div>
+                    
+                    <div class='BusinessInfoTitle'>
+                        Business Address: 
+                        <span id ='businessAddreddAddReview' class ='BusinessInfoResult'>[Business Address]</span>
+                    </div>
+            
+                    <div>&nbsp</div> 
+            
+                    <div class='BusinessInfoTitle'>
+                        Business Type: 
+                        <span id ='businessTypeAddReview' class ='BusinessInfoResult'>[Business Type]</span>
+                    </div>
+            
+                    <div>&nbsp</div> 
+                </div>
+				
+				-->
+                
+                
+				<div class="margin-base-vertical center-block headlineHeaderFont" style="font-size: xx-large; color:blue" >
+                         <i><u><b>Your Rate</b></u></i>
+                </div>
+
+					
+                <div class="panel-body">
+                    
+                    <div class="row clearfix">
+                         
+                        <div class="col-xs-5  col-lg-5 col-md-5 ">
+                            <div class="caption ">
+                                <div class='addReviewScoreStyle'>Overall </div>					
+                                <div id ='addScore-overall' ></div>
+                                
+                              
+                                      
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-5 col-lg-5 col-md-5 ">
+                           <div class="caption ">
+                                <div class='addReviewScoreStyle' >Price </div>					
+                                <div id ='addScore-price' ></div>
+                           </div>
+                        </div>
+                      
+                    </div>
+            
+					<br>
+                    <div class="row clearfix">
+                         
+                        <div class="col-xs-5  col-lg-5 col-md-5 ">
+					
+                            <div class="caption ">
+                                <div class='addReviewScoreStyle'>Quality </div>					
+                                <div id ='addScore-quality' ></div>
+                            </div>
+                        </div>
+						
+                        <div class="col-xs-offset-2 col-lg-offset-2 col-md-offset-2 col-xs-5 col-lg-5 col-md-5 ">
+
+                             <div class="caption ">
+                                <div class='addReviewScoreStyle'>Parking </div>					
+                                <div id ='addScore-parking'></div>
+                            </div>
+						</div>
+						
+					</div>
+                </div>
+            
+               
+                                
+                    
+				<div class="margin-base-vertical center-block headlineHeaderFont" style="font-size: xx-large; color:blue" >
+                         <i><u><b>Your Thoughts</b></u></i>
+                </div>
+                
+                <div class="panel-body">
+                    
+                    <form class="form-horizontal" id='thoutsOfReviewer'>
+
+                    
+                
+                            <div class ="form-group">
+                                <label for="viditDateAddReview" class="col-lg-4 col-md-4 col-sm-4 control-label "><span class="addReviewScoreStyle" >Visit at:</span></label>
+                                <div class="col-lg-8 col-md-8 col-sm-8">
+                                    <input name ='visitDate' type="date" class="form-control" id="viditDateAddReview" >
+                                </div>
+                            </div>
+                        
+                        <div class="form-group">
+                                <div class="controls">                     
+                                     <textarea  id="userCommentToAdd"  name="userCommentToAdd" placeholder="Let the other know what you think about this place. (Optional)"></textarea>
+                                </div>
+                        </div>
+                    </form>
+                   
+                    
+                </div>
+                
+                    
+				<div>
+				 <a href="#"><div id ='sendReviewData' class='addReviewSubmitBtn center-block' onclick="$(addReview)">Send</div></a>
+				 </div>
+             
+			 
+			 
+
+			</div><!-- //main content -->
+		</div><!-- //row -->
+	</div> <!-- //container -->
+   
+   
+   
+   
+            
+
+			
+    
+</section>
+
+
+
+<!------------------------------------Business page-------------------------------------->
+
+<section id ="busienssPage" data-role ="page" > 
+   
+    <div class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class = "container">
+            
+            <div class="btn navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+
+            </div>
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+               
+				<ul class = "nav navbar-nav navbar-left">
+				    <li class="active"><a href = "#homePage" data-placement='bottom' >Home</a></li>
+                    <li ><a href = "#searchResults" data-placement='bottom' >Return to Search Results</a></li>
+			    </ul>
+                <ul class = "nav navbar-nav navbar-right" >
+                    <li><a href = "#" data-placement='bottom' class="popoverId">Profile</a></li>
+                    <li><a href = "#" class="logoutPressed" >Logout</a></li>
+                </ul> 
+                
+            </div>
+        </div>
+    </div>
+    
+<div class="wrapper">
+    <div class="boxBusiness">
+        <div class="row row-offcanvas row-offcanvas-left">
+          
+           <!-- main right col -->
+            <div class="column col-lg-12 col-md-12 col-sm-12" id="mainBusinessPageLayout">
+                
+                             
+                <div class="padding">
+                    <div class="full col-lg-11 col-md-11 col-sm-11">
+                      
+                        <!-- content -->                      
+                      	<div class="row">
+                          
+                         <!-- main col left --> 
+                         <div class="col-sm-4" id="leftLayoutBusinessPage">
+                           
+                              <div class="panel panel-default">
+                                <div class="panel-thumbnail" id="BusinessPageImageOfBusiness">
+                                    <img class ="img-responsive" src="http://upload.wikimedia.org/wikipedia/commons/b/b8/Nuremberg_Business_Tower.jpg" class="img-responsive">
+                                </div>
+                                  
+                                <div class="panel-body" id="businessInfoHeight">
+                                    <div class='BusinessPageInfoTitle'>
+                                        Business Name:
+                                        <span id ='businessNameBusinessPage' class ='BusinessPageInfoResult'>[Business Name]</span>
+                                    </div>
+
+                                    <div>&nbsp</div>
+
+                                    <div class='BusinessPageInfoTitle'>
+                                        Business Type: 
+                                        <span id ='businessTypeBusinessPage' class ='BusinessPageInfoResult'>[Business Type]</span>
+                                    </div>
+                                    
+                                    <div>&nbsp</div> 
+
+                                    <div class='BusinessPageInfoTitle'>
+                                        Business Address: 
+                                        <span id ='businessAddreddBusinessPage' class ='BusinessPageInfoResult'>[Business Address]</span>
+                                    </div>
+                                    
+                                    <div>&nbsp</div> 
+
+                                    <div class='BusinessPageInfoTitle'>
+                                        Last Update: 
+                                        <span id ='businessLastUpadateBusinessPage' class ='BusinessPageInfoResult'>[Business update]</span>
+                                    </div>
+                                    
+                                </div>
+                              </div>
+                                     
+									<div class="row">
+					
+										<a class='btn pull-left btn-info col-md-3' id="getReviewButton" ><font color='white'>Get Reviews</font></a>
+										<a class='btn pull-right btn-success col-md-3' id="addReviewButton" ><font color='white'>Add Review</font></a>
+											<!--@dc-->
+						 
+						 
+									</div>        
+                           
+                          </div>
+                          
+                          <!-- main col right -->
+                          <div class="col-sm-8 col-md-8" >
+                            
+                              <div class="row">
+                                    <div class="col-sm-6 col-md-6">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading mainFont"> 
+                                                 <h4>Our users rate:</h4>
+                                            </div>
+                                 
+                                            <div class="panel-body">
+                                            
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-6 col-md-5 ">
+                                                        <br>
+                                                         <h1 class="rating-num" id='businessRank'>3.0</h1>
+                                                         <div  id ='totalScoreStarBusiness' ></div>
+                                                            
+                                                         <div>
+                                                             <br>
+                                                             <span id ="totalRanker" class="glyphicon glyphicon-user">1,050,008 total</span>
+                                                         </div>
+                                                    </div>
+                                          
+                                                    <div class="col-xs-7 col-sm-6 col-md-6  ">
+                                             
+                                                        <div class="row rating-desc">
+                                                            <div class="col-xs-3 col-sm-4 col-md-3 text-right">
+                                                                <span class="glyphicon glyphicon-star"></span>5
+                                                            </div>
+                           
+                                                            <div class="col-xs-8 col-sm-6 col-md-9">
+                                                                 <div class="progress progress-striped">
+                                                                    <div id ="BusinessOverall5Raters" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                                        <p id ="5RatersPercent" class="fontSpecial"><b>80%</b></p>
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                           <!-- end 5 -->
+                                                            
+                                                           <div class="col-xs-offset-1 col-sm-offset-2"></div>
+                                                           
+                                                           <div class="col-xs-3 col-sm-4 col-md-3 text-right">
+                                                                <span class="glyphicon glyphicon-star"></span>4
+                                                           </div>
+                           
+                                                           <div class="col-xs-8 col-sm-6 col-md-9">
+                                                                <div class="progress progress-striped">
+                                                                    <div id = "BusinessOverall4Raters" class="progress-bar progress-bar-ok" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                                        <p id ="4RatersPercent" class="fontSpecial"><b>60%</b></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                             <!-- end 4 -->
+                                                             
+                                                            <div class="col-xs-offset-1 col-sm-offset-2"></div>
+                           
+                                                            <div class="col-xs-3 col-sm-4 col-md-3 text-right">
+                                                                <span class="glyphicon glyphicon-star"></span>3
+                                                            </div>
+                            
+                                                            <div class="col-xs-8 col-sm-6 col-md-9">
+                                                                 <div class="progress progress-striped">
+                                                                    <div id = "BusinessOverall3Raters" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                                        <p id ="3RatersPercent" class="fontSpecial"><b>40%</b></p>
+                                                                     </div>
+                                                                 </div>
+                                                            </div>
+                                                             <!-- end 3 -->
+                                                             
+                                                            <div class="col-xs-offset-1 col-sm-offset-2"></div>
+                                                            
+                                                            <div class="col-xs-3 col-sm-4 col-md-3 text-right">
+                                                                <span class="glyphicon glyphicon-star"></span>2
+                                                            </div>
+                           
+                                                            <div class="col-xs-8 col-sm-6 col-md-9">
+                                                                <div class="progress progress-striped">       
+                                                                    <div id ="BusinessOverall2Raters" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                                        <p id ="2RatersPercent" class="fontSpecial"><b>20%</b></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end 2 -->
+                            
+                                                            <div class="col-xs-offset-1 col-sm-offset-2"></div>
+                                                            
+                                                            <div class="col-xs-3 col-sm-4 col-md-3 text-right">
+                                                                <span class="glyphicon glyphicon-star"></span>1
+                                                            </div>
+                            
+                                                            <div class="col-xs-8 col-sm-6 col-md-9">
+                                                                <div class="progress progress-striped">
+                                                                    <div id="BusinessOverall1Raters" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+                                                                        <p id ="1RatersPercent" class="fontSpecial"><b>15%</b></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end 1 -->
+                                                            
+                                                            <div class="col-xs-offset-1 col-sm-offset-2"></div>
+                                                      
+                                                        </div>
+                                                        <!-- end row -->
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                             
+                                    </div>
+                                  
+                                  <div class="col-sm-6 col-md-6" >
+                                      <div class="panel panel-info">
+                                            <div class="panel-heading mainFont"> 
+                                                 <h4>Your Friends rate:</h4>
+                                            </div>
+                                 
+                                          <div class="panel-body">
+                                              <div class="row">
+                                              <div class =' mainFont text-left col-md-3 col-sm-4 col-xs-2' style="font-size: large; color: blue">Overall:</div>
+                                              <div id="overallFromFriendsScoreNumberBusinessPage" class="mainFont col-md-1 col-sm-1 col-xs-1" style="color: saddlebrown; font-size: large">3</div>
+                                              <div id="overallFromFriendsBusinessPage" class="col-md-offset-2 col-md-6 col-sm-offset-0 col-sm-7 col-xs-offset-4 col-xs-5"></div>
+                                              </div>
+                                              
+                                              <br>
+                                              
+                                               <div class="row">
+                                              <div class =' mainFont text-left col-md-3 col-sm-4 col-xs-2' style="font-size: large; color: blue">Price:</div>
+                                              <div id="PriceFromFriendsScoreNumberBusinessPage" class="mainFont col-md-1 col-sm-1 col-xs-1" style="color: saddlebrown; font-size: large">3</div>
+                                              <div id="PriceFromFriendsBusinessPage" class="col-md-offset-2 col-md-6 col-sm-offset-0 col-sm-7 col-xs-offset-4 col-xs-5"></div>
+                                              </div>
+                                              
+                                              <br>
+                                              
+                                               <div class="row">
+                                              <div class =' mainFont text-left col-md-3 col-sm-4 col-xs-2' style="font-size: large; color: blue">Parking:</div>
+                                              <div id="ParkingFromFriendsScoreNumberBusinessPage" class="mainFont col-md-1 col-sm-1 col-xs-1" style="color: saddlebrown; font-size: large">3</div>
+                                              <div id="ParkingFromFriendsBusinessPage" class="col-md-offset-2 col-md-6 col-sm-offset-0 col-sm-7 col-xs-offset-4 col-xs-5"></div>
+                                              </div>
+                                              
+                                              <br>
+                                              
+                                               <div class="row">
+                                              <div class =' mainFont text-left col-md-3 col-sm-4 col-xs-2' style="font-size: large; color: blue">Quality:</div>
+                                              <div id="QualityFromFriendsScoreNumberBusinessPage" class="mainFont col-md-1 col-sm-1 col-xs-1" style="color: saddlebrown; font-size: large">3</div>
+                                              <div id="QualityFromFriendsBusinessPage" class="col-md-offset-2 col-md-6 col-sm-offset-0 col-sm-7 col-xs-offset-4 col-xs-5"></div>
+                                              </div>
+                                              
+                                              <br>
+                                              <br>
+                                          </div>
+                                      </div>
+                                      
+                                  </div>
+                                             
+                              </div>
+
+                  
+                              <div class="row"> 
+                                <div class="col-md-6 col-sm-6" id="map-canvas">
+                                     <div class="panel panel-info">
+                                            <div class="panel-heading mainFont"> 
+                                                 <h4>Map for this business</h4>
+                                            </div>
+                                 
+                                         
+                                          <div class="Flexible-container" id="mapHeight">
+                                             <div class="panel-body " id='geomap'  style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;frameborder:0; scrolling:no; marginheight:0; marginwidth:0;">
+                                             </div>
+                                          </div>
+                                     </div>
+                                </div>
+                                  
+                                  <div class="col-md-6 col-sm-6" >
+                                     <div class="panel panel-info">
+                                            <div class="panel-heading mainFont"> 
+                                                 <h4>Meet Me Up</h4>
+                                            </div>
+                                 
+                                            <div id="panelBodyMeetMeUpBusinessPage" class="panel-body">
+                                                 <form id="meetMeUpForm" class="form-horizontal">
+                                                    <div class="left-inner-addon form-group">
+                                                        <span><i class="glyphicon glyphicon-pencil"></i></span>
+                                                        <input type="text" class="form-control mainFont " name="subjectOfMeetMeUp" id="subjectOfMeetMeUp" placeholder="Enter subject" />
+                                                    </div>
+                                                     
+                                                     <div class="left-inner-addon form-group">
+                                                         <span><i class="glyphicon glyphicon-envelope"></i></span>
+                                                         <input type="hidden" id="e10" style="width:100%"/>                       
+                                                     </div>
+                                                     
+                                                    <div class="form-group">
+                                                       <textarea  id="contentMeetMeUp"  name="userMeetMeUp" class="mainFont" placeholder="Write your invitation"></textarea>
+                                                    </div>
+                                                     
+                                                     <a class="btn btn-info mainFont pull-right" id ="sendButtonMeetMeUp"><font color="White">Submit</font></a>
+                                                 </form>
+                                     </div>
+                                </div>
+                              </div>
+                            
+                          
+
+                             
+                            
+                               
+                            
+                          </div>
+                       </div><!--/row-->
+                      
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+          
+        </div>
+    </div>
+</div>
+
+
+<!--post modal-->
+
+</section>
+
+<!---------------------------------FindBusiness------------------------------------------->
+
+
+<section id ="findBusiness" data-role ="page" class="findBusinessHtml">
+
+    
+    <div class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class = "container">
+            
+            <div class="btn navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+
+            </div>
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+                <ul class = "nav navbar-nav navbar-left">
+                    <li class="active"><a href = "#homePage" data-placement='bottom' >Home</a></li>
+                </ul>
+                <ul class = "nav navbar-nav navbar-right" >
+                    <li><a href = "#" data-placement='bottom' class="popoverId">Profile</a></li>
+                    <li><a href = "#" class="logoutPressed">Logout</a></li>
+                </ul> 
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class = "container" style="padding-top: 5%;">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 panel-new">
+
+                            <div class="margin-base-vertical center-block headlineHeaderFont" style="font-size: xx-large" ><b>Find Business</b></div>
+
+                                
+                                <div class="margin-base-vertical findBusinessStyle">
+					
+                                    <p>
+					Find exactly the place you're looking for.
+				</p>
+
+				<p>
+					Let's do it.
+				</p>
+                                    
+				</div>
+                  
+                                
+                                      <div class="findBusinessStyle1" id="businessCatagoryFindBusiness">  Category: </div>
+                                
+						<select class="form-control" id="businessTypeFindBusiness">
+                                                    
+													<option value="all">All</option>
+                                                    <option value="Bar">Bar</option>
+                                                    <option value="Restaurant">Restaurant</option>
+                                                    <option value="Movie">Movie</option>
+                                                    <option value="Club">Club</option>
+                                                    
+                                                        </select>
+                                
+                                      <div class="findBusinessStyle1">   
+                                          City:
+                                      </div>
+                                
+                                <select  id ="businessCityFindBusiness" class="form-control">
+								<option value="all">All</option>
+                                    <option value="Tel-Aviv">Tel-Aviv</option>
+                                     <option value="Haifa">Haifa</option>
+                                      <option value="Bat-Yam">Bat-Yam</option>
+                                       <option value="Modiin">Modiin</option>
+                                       <option value="Rehovot">Rehovot</option>
+                                     </select>
+                                
+                                        
+                                <div class="findBusinessStyle1">    Minimum Rating:    </div>
+                                        <div id="minimumRatingFindBusiness"></div>
+                                        
+						
+								<input id="specificNameFindBusiness" type="text" class="form-control input-lg " name="email" placeholder="Search here for a specific business">
+					
+                                        
+					<p class="text-center">
+                                            
+                                    <a href="#" onClick="$(searchBusiness);">	<button type="submit" class="btn btn-lg ">Search</button></a>
+
+					</p>
+					
+				
+
+				<div class="margin-base-vertical">
+					<small class="text-muted">We hope you find what you're looking for :)</small>
+				</div>
+
+			</div><!-- //main content -->
+		</div><!-- //row -->
+	</div> <!-- //container -->
+
+    
+    
+</section>
+
+
+
+<!---------------------------------Friends--------------------------------------------------------->
+
+<section id ="friendsZone" data-role ="page" class='bg-colorAllPage'>
+    <!--Building the upper navbar-->
+    
+    <div class = "navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class = "container">
+            
+            <div class="btn navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+                <span class =" icon-bar"></span>
+
+            </div>
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+                <ul class = "nav navbar-nav navbar-left">
+                    <li class="active" ><a href = "#homePage" data-placement='bottom' >Home</a></li>
+                </ul>
+                <ul class = "nav navbar-nav navbar-right" >
+                    <li><a href = "#" data-placement='bottom' class="popoverId">Profile</a></li>
+                    <li><a href = "#" class="logoutPressed">Logout</a></li>
+                </ul> 
+                
+            </div>
+        </div>
+    </div>
+    
+    <!--Buiding the tab format for this page:-->
+        <!--1. All friends-->
+        <!--2. Favorite friends-->
+        <!--3. Regular friends-->
+    
+        <ul class="nav nav-tabs" id="friendZoneTabs">
+            <li class="active"><a onclick="cleanFriendTab();"  href="#allFriendsTab" data-toggle="tab" class="mainFont" style="float:left">All Friends  &nbsp <span class="bubble" style="float: right; color: black; background: #005BBD"><center id="totalNumberOfFriends" style="color:white""></center></span>&nbsp</a></li>
+          <li><a  href="#favoriteFriendsTab" onclick="cleanFriendTab();" data-toggle="tab" class="mainFont"style="float:left">Favorite Friends  &nbsp <span class="bubble" style="float: right; color: black;  background: #005BBD"><center id="favoriteNumberOfFriends" style="color:white"></center></span>&nbsp</a></li>
+          <li><a   href="#regularFriendsTab" onclick="cleanFriendTab();" data-toggle="tab" class="mainFont" style="float:left">Regular Friends  &nbsp <span class="bubble" style="float: right; color: black;  background: #005BBD"><center id="regularNumberOfFriends" style="color:white"></center></span>&nbsp</a></li>
+          <li class="pull-right" id="addBtnToggleHere"></li>
+        </ul>
+        
+    
+     <div class="tab-content">
+         <!--All friend Page content tab-->
+          <div class="tab-pane active" id="allFriendsTab">
+              <br>
+              <div class="row">
+                  <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-4 col-md-4 col-sm-7 col-xs-7">
+                    <!--<label for="txtEmployeeName" class="mainFont">Friend:</label>-->
+                    <input  id="allFriendSearchSection" class="mainFont" placeholder="Search for friends" >
+                  </div>
+				  <div class="col-lg-offset-1 col-lg-4 col-md-2 col-sm-2 col-xs-2">
+					<div class="myButton " id="fbLogin">Sync With Facebook</div>
+                      <!--<div class="btn btn-info" id="fbLogin" style="background-color: #001D92; border-color: #050505" >Sync With Facebook</div>-->
+                  </div>
+              </div>
+              
+              <div class="row">
+              <form id="allFriendForm">
+              <!--Here js will fill this tab's form with all of user friends,-->
+              <!--Note : the row will be filled in size of 3-->
+               
+              </form>
+              </div>
+              <br>
+              
+			  
+			
+          </div>
+         <!-- @end #allFriendsPage -->
+     
+    
+    <!--favorite friend Page content tab-->
+          <div class="tab-pane " id="favoriteFriendsTab" >
+              <br>
+              <div class="row">
+                  <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-4 col-md-4 col-sm-7 col-xs-7">
+                    <!--<label for="txtEmployeeName" class="mainFont">Friend:</label>-->
+                    <input  id="favoriteFriendSearchSection" placeholder="Search favorite friends" >
+                  </div>
+				   <div class="col-lg-offset-1 col-lg-4 col-md-2 col-sm-2 col-xs-2">
+                      <div class="myButtonReg" id="changToRegBtn">Change to Regular</div>
+                  </div>
+              </div>
+              
+              <div class="row">
+              <form id="favoriteFriendForm">
+              <!--Here js will fill this tab's form with all of user friends,-->
+              <!--Note : the row will be filled in size of 3-->
+               
+     
+              </form>
+              </div>
+              <br>
+              
+              
+          </div>
+         <!-- @end #favorite friend -->
+    
+         <!--regular friend Page content tab-->
+          <div class="tab-pane " id="regularFriendsTab" >
+              <br>
+              <div class="row">
+                  <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-4 col-md-4 col-sm-7 col-xs-7">
+                    <!--<label for="txtEmployeeName" class="mainFont">Friend:</label>-->
+                    <input  id="regularFriendSearchSection" placeholder="Search regular friends" >
+                  </div>
+				   <div class="col-lg-offset-1 col-lg-4 col-md-2 col-sm-2 col-xs-2">
+                      <div class="myButtonFav" id="changToFavBtn">Change to Favorite</div>
+                  </div>
+              </div>
+              
+              <div class="row">
+              <form id="regularFriendForm">
+              <!--Here js will fill this tab's form with all of user friends,-->
+              <!--Note : the row will be filled in size of 3-->
+               
+              </form>
+              </div>
+              
+              <br>
+             
+              
+          </div>
+         <!-- @end #regulr friend -->
+    
+    </div>
+    
+</section>
+
+<!---------------------------------SearchResults Page------------------------------------------->
+
+<section id ="searchResults" data-role ="page" class='bg-colorAllPage'>
+    <div class = "navbar navbar-inverse navbar-fixed-top">
+        <div class = "container">
+            <div class = "collapse navbar-collapse navHeaderCollapse">
+                <ul class = "nav navbar-nav navbar-left">
+                    <li class="active"><a href = "#homePage" data-placement='bottom' >Home</a></li>
+                    <li ><a href = "#findBusiness" data-placement='bottom' >Return to Find Business page</a></li>
+                </ul>
+                <ul class = "nav navbar-nav navbar-right">
+                    <li><a href = "#" data-placement='bottom'   class="popoverId">Profile</a></li>
+                    <li><a href = "#" class="logoutPressed">Logout</a></li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header-new">
+            <br>
+           <div>
+                <span class="inline timeline-title headlineNew">Search Results</span>
+                
+            </div>
+        </div>
+        
+       <div id ="flux">
+            
+            
+            <ul class='timeline'>
+        
+             <li>
+             
+                 <div id="firstResultbadge" class='timeline-badge'>
+                     <i class='glyphicon glyphicon-globe'></i>
+                 </div>
+ 
+                  
+                    <a href='#busienssPage' class='timeline-panel bpLink' style="text-decoration:none; " id="firstResult" onClick="$(populateFirstResult);">
+ 
+                       <div class='timeline-heading'>
+                            <h2 class='timeline-title' id="firstCategoryResult"> </h2>
+                            <div class='line-separator'></div>
+                       </div>
+ 
+                       <div class='timeline-body'>
+                            <div class='container '>
+                               <div class='row'>
+                                   <div class='col-xs-12 col-sm-6 col-md-4'>
+                                           <div class='row'>
+ 
+                                               <div class='col-sm-6 col-md-7'>
+                                                     <b><h3 id="firstNameResult" class="detailInfoFont2"  > </h3> </b>                                         
+                                                       <div   class = 'glyphicon glyphicon-map-marker'> &nbsp <b id="firstAddressResult" class='detailInfoFont'></b></div>
+                                                       <br><br>
+													   <div  class='glyphicon glyphicon-envelope'> &nbsp <b id="firstEmailResult" class='detailInfoFont'></b> </div>
+                                                       <br><br>
+                                                       <div  class='glyphicon glyphicon-phone'> &nbsp <b id="firstPhoneResult" class='detailInfoFont'></b>  </div>
+                                                   
+                                                </div>
+ 
+                                               <div class='col-sm-3 col-md-offset-1 col-md-4'>
+                                                   <br>
+                                                   <img src='http://bayareabartenderforhire.com/wp-content/uploads/2013/05/Young-people-in-club-or-bar-drinking-beer-out-of-a-beer-bottle-and-have-fun.jpg' alt='' class='img-rounded img-responsive' />
+                                               </div>
+ 
+                                           </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                 </a>
+ 
+               </li>
+ 
+               <li class='timeline-inverted'>
+ 
+                 <div id="secondResultbadge" class='timeline-badge success'>
+                     <i class='glyphicon glyphicon-certificate'></i>
+                 </div>
+ 
+                 <a href='#busienssPage' class='timeline-panel' style="text-decoration:none" id="secondResult bpLink" onClick="$(populateSecondResult);">
+ 
+                       <div class='timeline-heading'>
+                            <h2 id="secondCategoryResult" class='timeline-title'> </h2>
+                            <div class='line-separator'></div>
+                       </div>
+ 
+                       <div class='timeline-body'>
+                            <div class='container '>
+                               <div class='row'>
+                                   <div class='col-xs-12 col-sm-6 col-md-4'>
+                                           <div class='row'>
+ 
+                                               <div class='col-sm-6 col-md-7'>
+													<b><h3 id="secondNameResult" class="detailInfoFont2"  > </h3> </b>                                         
+                                                       <div   class = 'glyphicon glyphicon-map-marker'> &nbsp <b id="secondAddressResult" class='detailInfoFont'></b></div>
+                                                       <br><br>
+													   <div  class='glyphicon glyphicon-envelope'> &nbsp <b id="secondEmailResult" class='detailInfoFont'></b> </div>
+                                                       <br><br>
+                                                       <div  class='glyphicon glyphicon-phone'> &nbsp <b id="secondPhoneResult" class='detailInfoFont'></b>  </div>
+                                               </div>
+ 
+                                               <div class='col-sm-3 col-md-offset-1 col-md-4'>
+                                                   <br>
+                                                   <img src='http://filmcrithulk.files.wordpress.com/2011/05/movie-theater1.jpg' alt='' class='img-responsive' />
+                                               </div>
+ 
+                                           </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                 </a>
+        
+                   
+                   
+                   
+               </li>
+               
+               <li>
+             
+                 <div id="thirdResultbadge" class='timeline-badge'>
+                     <i class='glyphicon glyphicon-globe'></i>
+                 </div>
+ 
+                  
+                    <a href='#busienssPage' class='bpLink timeline-panel' style="text-decoration:none" id="thirdResult" onClick="$(populateThirdResult);">
+ 
+                       <div class='timeline-heading'>
+                            <h2 class='timeline-title' id="thirdCategoryResult" > </h2>
+                            <div class='line-separator'></div>
+                       </div>
+ 
+                       <div class='timeline-body'>
+                            <div class='container '>
+                               <div class='row'>
+                                   <div class='col-xs-12 col-sm-6 col-md-4'>
+                                           <div class='row'>
+ 
+                                               <div class='col-sm-6 col-md-7'>
+													<b><h3 id="thirdNameResult" class="detailInfoFont2"  > </h3> </b>                                         
+                                                       <div   class = 'glyphicon glyphicon-map-marker'> &nbsp <b id="thirdAddressResult" class='detailInfoFont'></b></div>
+                                                       <br><br>
+													   <div  class='glyphicon glyphicon-envelope'> &nbsp <b id="thirdEmailResult" class='detailInfoFont'></b> </div>
+                                                       <br><br>
+                                                       <div  class='glyphicon glyphicon-phone'> &nbsp <b id="thirdPhoneResult" class='detailInfoFont'></b>  </div>
+                                               
+                                               </div>
+ 
+                                               <div class='col-sm-3 col-md-offset-1 col-md-4'>
+                                                   <br>
+                                                   <img src='http://bayareabartenderforhire.com/wp-content/uploads/2013/05/Young-people-in-club-or-bar-drinking-beer-out-of-a-beer-bottle-and-have-fun.jpg' alt='' class='img-rounded img-responsive' />
+                                               </div>
+ 
+                                           </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                 </a>
+ 
+               </li>
+ 
+               <li class='timeline-inverted'>
+ 
+                 <div id="fourthResultbadge" class='timeline-badge success'>
+                     <i class='glyphicon glyphicon-certificate'></i>
+                 </div>
+ 
+                 <a href='#busienssPage' class='bpLink timeline-panel' style="text-decoration:none" id="fourthResult" onClick="$(populateFourthResult);">
+ 
+                       <div class='timeline-heading'>
+                            <h2 id="fourthCategoryResult" class='timeline-title'> </h2>
+                            <div class='line-separator'></div>
+                       </div>
+ 
+                       <div class='timeline-body'>
+                            <div class='container '>
+                               <div class='row'>
+                                   <div class='col-xs-12 col-sm-6 col-md-4'>
+                                           <div class='row'>
+ 
+                                               <div class='col-sm-6 col-md-7'>
+													<b><h3 id="fourthNameResult" class="detailInfoFont2"  > </h3> </b>                                         
+                                                       <div   class = 'glyphicon glyphicon-map-marker'> &nbsp <b id="fourthAddressResult" class='detailInfoFont'></b></div>
+                                                       <br><br>
+													   <div  class='glyphicon glyphicon-envelope'> &nbsp <b id="fourthEmailResult" class='detailInfoFont'></b> </div>
+                                                       <br><br>
+                                                       <div  class='glyphicon glyphicon-phone'> &nbsp <b id="fourthPhoneResult" class='detailInfoFont'></b>  </div>
+                                               
+                                                </div>
+ 
+                                               <div class='col-sm-3 col-md-offset-1 col-md-4'>
+                                                   <br>
+                                                   <img src='http://filmcrithulk.files.wordpress.com/2011/05/movie-theater1.jpg' alt='' class='img-responsive' />
+                                               </div>
+ 
+                                           </div>
+                                   </div>
+                               </div>
+                           </div>
+						   
+						   
+                       </div>
+                 </a>
+        
+                   
+                   
+                   
+               </li>
+             
+              
+           </ul>
+
+        
+        
+	<!--	<a class="left carousel-control" id="prevReview" onClick="$(prevSearchResults);" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-hand-left" ></span></a> -->
+      <a class="right carousel-control" id="nextReview" onClick="$(populateSearchResults);"  href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-hand-right"></span></a>
+        
+        </div>
+     
+     
+   
+</section>
+
+
+
+
+
+
+
+    </body>
+</html>
